@@ -27,7 +27,9 @@ public class Search extends Filter {
 
     private void searchForKeyword() {
 
-        keyword = OptionReader.getString("Keyword");
+        if(keyword == null) { // Search received input from pipe
+            keyword = OptionReader.getString("Keyword");
+        }
         keywordNotFound = false;
 
         // These variables outside of the for-loop ensure that  the line removal done below
@@ -98,9 +100,17 @@ public class Search extends Filter {
 
     }
 
+    /**
+     * This helper method that differs from the rest of the concrete Filters
+     * This is because when getting input from console or file, the console will prompt for a keyword
+     */
     private void acceptConsoleInput() {
 
+        // Get keyword form console
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the keyword: ");
+        keyword = scanner.nextLine();
+
         System.out.println("Enter your sentences: (enter a blank line to stop)");
         String curLine = scanner.nextLine();
 
@@ -121,14 +131,23 @@ public class Search extends Filter {
 
     }
 
+    /**
+     * This helper method that differs from the rest of the concrete Filters
+     * This is because when getting input from console or file, the console will prompt for a keyword
+     */
     private void acceptFileInput() {
 
         String inputFile = OptionReader.getString("Root") // input file root from config file
                 + OptionReader.getString("InputFileName"); // input file name from config file
 
+        // Get keyword form console
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the keyword: ");
+        keyword = scanner.nextLine();
+
         try {
 
-            Scanner scanner = new Scanner(new File(inputFile));
+            scanner = new Scanner(new File(inputFile));
 
             while (scanner.hasNextLine()) {
 
@@ -178,7 +197,7 @@ public class Search extends Filter {
     }
 
     /**
-     * This is the only helper method that differs from the rest of the concrete Filters
+     * This helper method that differs from the rest of the concrete Filters
      * This is because keyword highlighting will occur when outputting to the console
      */
     private void outputToConsole() {

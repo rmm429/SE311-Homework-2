@@ -15,6 +15,7 @@ Notes for grader:
     These methods are identically included in all classes (except for Search) since the Filter class itself could not be changed.
     I structured it this way as to not include all of this code in each concrete Filter's run() method.
     The only Filter that differs in this regard is Search, which incorporates keyword highlighting when outputting to console.
+    Furthermore, the console and file input methods for Search will prompt for a keyword rather than using the one in the config.properties file.
 
     The concrete Input and Output Filters are identical.
     This is because the Input Filter will handle output if there is no out Pipe and the Output Filter will accept input if there is no in Pipe.
@@ -57,6 +58,8 @@ config.properties:
     This is the keyword that will be searched for in the list of lines.
     The keyword has a default value, but can and should be changed based on the desired use case.
     The value set for this field is literal, meaning the Searcher will look for exactly whatever is entered.
+    If getting input from the console or a file, the console will prompt the user to enter a keyword.
+    This means that the 'Keyword' field only applies when Search gets input from a Pipe.
     Furthermore, the keyword is case-sensitive, meaning capitalization does matter.
     See the "Case-sensitivity and punctuation" section below for more information.
 
