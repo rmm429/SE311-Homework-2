@@ -1,0 +1,5 @@
+[is] last sentence This
+last sentence This [is]
+last sentence This [is]
+sentence This [is] last
+This [is] last sentence

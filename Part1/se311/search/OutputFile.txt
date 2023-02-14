@@ -1,0 +1,5 @@
+am [person] typing I
+I am [person] typing
+[person] typing I am
+[person] typing I am
+typing I am [person]
