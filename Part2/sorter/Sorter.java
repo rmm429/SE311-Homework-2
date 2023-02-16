@@ -1,13 +1,15 @@
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
-public class Shifter extends Filter {
+public class Sorter extends Filter {
 
     private ArrayList<String> lines;
 
     public static void main(String args[]) {
-        Shifter shifter = new Shifter();
-        shifter.run();
+        Sorter sorter = new Sorter();
+        sorter.run();
     }
 
     @Override
@@ -17,29 +19,24 @@ public class Shifter extends Filter {
         OptionReader.readOptions();
 
         storeLines();
-        shiftAllLines();
+        sortLines();
         outputLines();
 
     }
 
-    private void shiftAllLines() {
+    private void sortLines() {
 
         int lineCount = lines.size();
-        for(int i = 0; i < lineCount; i++) {
 
+        for (int i = 0; i < lineCount; i++) {
 
-            String origLine = lines.get(i);
-            ArrayList<String> words = new ArrayList<>( // each word of the original line in a String list
-                    Arrays.asList(origLine.split(" "))); // words determined by space separation
-            int wordCount = words.size();
+            for (int j = i + 1; j < lineCount; j++) {
+                String curLine = lines.get(i);
+                String nextLine =  lines.get(j);
 
-            for (int j = 1; j < wordCount; j++) {
-
-                String lastWord = words.get(wordCount - 1);
-                words.add(0, lastWord);
-                words.remove(wordCount);
-                lines.add(String.join(" ", words));
-
+                if(curLine.compareToIgnoreCase(nextLine) > 0) { // Uppercase and lowercase letters will be treated the same
+                    Collections.swap(lines, i, j);
+                }
             }
 
         }

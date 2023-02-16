@@ -14,6 +14,14 @@ chmod +x run
 echo -e "Compiling shifter...\n"
 source compile
 
+echo -e "\nMoving into sorter dir..."
+cd ../sorter
+echo "Making scripts executable..."
+chmod +x compile
+chmod +x run
+echo -e "Compiling sorter...\n"
+source compile
+
 echo -e "\nMoving into output dir..."
 cd ../output
 echo "Making scripts executable..."
@@ -27,6 +35,7 @@ cd ..
 echo "Making root scripts executable..."
 chmod +x run_input
 chmod +x run_shifter
+chmod +x run_sorter
 chmod +x run_output
 
 echo -e "\nDone!"
