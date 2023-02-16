@@ -6,6 +6,14 @@ chmod +x run
 echo -e "Compiling input...\n"
 source compile
 
+echo -e "\nMoving into remover dir..."
+cd ../remover
+echo "Making scripts executable..."
+chmod +x compile
+chmod +x run
+echo -e "Compiling remover...\n"
+source compile
+
 echo -e "\nMoving into shifter dir..."
 cd ../shifter
 echo "Making scripts executable..."
@@ -34,6 +42,7 @@ echo -e "\nMoving to root dir..."
 cd ..
 echo "Making root scripts executable..."
 chmod +x run_input
+chmod +x run_remover
 chmod +x run_shifter
 chmod +x run_sorter
 chmod +x run_output
