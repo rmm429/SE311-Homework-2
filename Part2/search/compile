@@ -1,0 +1,18 @@
+mke#!/usr/bin/env bash
+
+echo "Cleaning build dir...";
+rm -rf build;
+mkdir build;
+
+echo "Compiling...";
+javac `find -name \*.java -print`;
+
+echo "Copying...";
+cp ./*.class build/;
+cp config.properties build/ 2>/dev/null
+
+echo "Cleaning again...";
+rm `find -maxdepth 1 -name \*.class -print`;
+
+echo "Done!";
+
