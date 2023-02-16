@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+cd shifter/build
+
+java Shifter
