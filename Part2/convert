@@ -1,0 +1,48 @@
+echo -e "\nMoving into input dir..."
+cd input
+echo "Converting scripts to Unix encoding..."
+dos2unix compile
+dos2unix run
+
+echo -e "\nMoving into remover dir..."
+cd ../remover
+echo "Converting scripts to Unix encoding..."
+dos2unix compile
+dos2unix run
+
+echo -e "\nMoving into shifter dir..."
+cd ../shifter
+echo "Converting scripts to Unix encoding..."
+dos2unix compile
+dos2unix run
+
+echo -e "\nMoving into sorter dir..."
+cd ../sorter
+echo "Converting scripts to Unix encoding..."
+dos2unix compile
+dos2unix run
+
+echo -e "\nMoving into output dir..."
+cd ../output
+echo "Converting scripts to Unix encoding..."
+dos2unix compile
+dos2unix run
+
+echo -e "\nMoving into search dir..."
+cd ../search
+echo "Converting scripts to Unix encoding..."
+dos2unix compile
+dos2unix run
+
+echo -e "\nMoving to root dir..."
+cd ..
+echo "Converting scripts to Unix encoding..."
+dos2unix make
+dos2unix run_input
+dos2unix run_remover
+dos2unix run_shifter
+dos2unix run_sorter
+dos2unix run_output
+dos2unix run_output
+
+echo -e "\nDone!"
