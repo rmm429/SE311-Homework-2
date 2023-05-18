@@ -1,4 +1,4 @@
-This part involves using standard input/output (bash command line) for the Pipe and Filter.
+This part involves using standard input/output alongside individual programs/scripts for the Pipe and Filter (bash shell).
 Beacause of this, individual programs/scripts were created, each handling a different purpose in the KWIC-Search pipeline.
 These programs can be piped together and input/output redirection can be used.
 Reader/"run_input" will prompt the user to enter lines that will be KWIC-sorted and stored for use.
