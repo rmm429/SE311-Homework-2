@@ -1,6 +1,6 @@
 This part involves using Java interfaces for the Pipe and Filter.
 When the program is started, it will prompt the user to enter lines that will be KWIC-sorted and stored for use.
-Then, the user can search for a keyword that is stored within the KWIC sorted lines repository.
+Then, the user can search for a keyword that is stored within the KWIC-sorted lines repository.
 
 To run the program, run the Controller.java file in the "se311" folder.
 The main() method is included here.
