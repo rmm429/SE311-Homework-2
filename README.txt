@@ -1,6 +1,6 @@
 This project is a Keyword-in-Context (KWIC) searcher.
 Part 1 involves using Java interfaces for the Pipe and Filter.
-Part 2 involves using standard input/output (command line) for the Pipe and Filter.
+Part 2 involves using standard input/output (bash command line) for the Pipe and Filter.
 
 Part 1:
 	Open the "Part1" folder in IntelliJ.
