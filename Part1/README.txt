@@ -1,11 +1,12 @@
+This part involves using Java interfaces for the Pipe and Filter.
+When the program is started, it will prompt the user to enter lines that will be KWIC-sorted and stored for use.
+Then, the user can search for a keyword that is stored within the KWIC sorted lines repository.
+
 To run the program, run the Controller.java file in the "se311" folder.
 The main() method is included here.
 Concrete Filters can be arranged in any order in the Pipeline, and the Pipeline can handle one or more Filters.
 
 Notes for grader:
-
-    Some of the concrete Filter names of this project differ slightly to how they are outlined in the assignment document.
-    The Reader Filter is named Input, the Writer Filter is named Output, and the Searcher Filter is named Search.
 
 	Each concrete Filter class each contains 8 identical helper methods.
     Two of these methods, determineInputType() and determineOutputType(), determine whether a Pipe will used or not for both input and output.
