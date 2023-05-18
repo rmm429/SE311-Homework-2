@@ -2,7 +2,7 @@ This part involves using standard input/output alongside individual programs/scr
 Beacause of this, individual programs/scripts were created, each handling a different purpose in the KWIC-Search pipeline.
 These programs can be piped together and input/output redirection can be used.
 Reader/"run_input" will prompt the user to enter lines that will be KWIC-sorted and stored for use.
-The other programs besdies Search and Writer perform the KWIC sorting.
+The other programs besdies Search and Writer perform the KWIC-sorting.
 Search/"run_search" is where the user can search for a keyword that is stored within the KWIC-sorted lines repository.
 Writer/"run_output" is utilized to output the search results.
 These programs can be run in different orders and each indiviudally can be utilize to execute different components of the KWIC sorting.
